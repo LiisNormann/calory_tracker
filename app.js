@@ -33,6 +33,11 @@ const ItemCtrl = (function() {
 
 //UI Controller
 const UICtrl = (function() {
+    //UI selectors (all relevant selectors to be used in the app)
+    const UISelectors = {
+        itemList: '#item-list'
+    }
+    
     return {
         populateItemList: function(items) {
             //create html content
@@ -49,7 +54,7 @@ const UICtrl = (function() {
             });
 
             //insert list items
-            document.querySelector("#item-list").innerHTML = html;
+            document.querySelector(UISelectors.itemList).innerHTML = html;
         }
     }
 })();
